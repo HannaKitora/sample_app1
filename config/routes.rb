@@ -10,7 +10,9 @@ Rails.application.routes.draw do
   
   get 'lists/:id' => 'lists#show', as: 'list'
   
-  get 'lists/edit'
+  get 'lists/:id/edit' => 'lists#edit', as: 'edit_list'
+  
+  patch 'lists/:id' => 'lists#update', as: 'update_list'
 
 
 end
